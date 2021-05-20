@@ -2,6 +2,13 @@
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 
 import DefaultLayout from '~/layouts/Default.vue'
+import '~/assets/styles.css'
+
+import Vue from 'vue'
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
+
+Vue.use(ElementUI);
 
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
