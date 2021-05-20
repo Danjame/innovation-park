@@ -12,7 +12,7 @@ module.exports = {
       options: {
         apiURL: 'http://localhost:1337',
         queryLimit: 100, // Defaults to 100
-        contentTypes: ['banner']
+        contentTypes: ['banner', 'about', 'business']
       }
     }
   ]

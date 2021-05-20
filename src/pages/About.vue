@@ -1,12 +1,30 @@
 <template>
   <Layout>
     <el-row class="banner">
-      <el-col :span="24">中科新恒创</el-col>
+      Slogan
     </el-row>
-    <h1>About</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error doloremque omnis animi, eligendi magni a voluptatum, vitae, consequuntur rerum illum odit fugit assumenda rem dolores inventore iste reprehenderit maxime! Iusto.</p>
+    <el-row class="main">
+      <div v-for="edge in $page.abouts.edges" :key="edge.node.id">
+        <h1>{{edge.node.title}}</h1>
+        <p>{{edge.node.description}}</p>
+      </div>
+    </el-row>
   </Layout>
 </template>
+
+<page-query>
+query {
+  abouts: allStrapiAbout {
+    edges {
+      node {
+        id
+        title
+        description
+      }
+    }
+  }
+}
+</page-query>
 
 <script>
 export default {
@@ -16,6 +34,24 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+.main {
+  padding: 2rem;
+  color: #3d84b8;
+}
 
+.main>div {
+  margin-bottom: 1rem;
+}
+
+h1 {
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .main {
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+  }
+}
 </style>

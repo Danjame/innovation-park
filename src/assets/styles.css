@@ -7,5 +7,14 @@
 
 .banner {
   height: 12rem;
-  background: #aaa;
+  line-height: 12rem;
+  text-align: center;
+  background: #ddd;
+}
+
+@media screen and (max-width: 767px) {
+  .banner {
+    height: 6rem;
+    line-height: 6rem;
+  }
 }

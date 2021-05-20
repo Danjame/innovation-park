@@ -31,6 +31,12 @@
       </span>
     </el-drawer>
     <slot/>
+    <el-row class="footer">
+      <el-col>
+        <p>北京中科新恒创科技产业发展有限公司</p>
+        <p>版权所有</p>
+      </el-col>
+    </el-row>
   </div>
 </template>
 
@@ -92,7 +98,16 @@ query {
 .menu-btn {
   display: none;
   font-size: 2rem;
-  color: #f55c47
+  color: #f55c47;
+}
+
+.footer {
+  height: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-top: solid 1px #f55c47;
+  text-align: center;
 }
 
 @media screen and (max-width: 767px) {
@@ -112,6 +127,10 @@ query {
 
   .header-menu {
     display: none;
+  }
+
+  .footer {
+    height: 6rem;
   }
 }
 </style>

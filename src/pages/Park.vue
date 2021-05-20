@@ -1,10 +1,11 @@
 <template>
   <Layout>
     <el-row class="banner">
-      <el-col :span="24">中科新恒创</el-col>
+      Slogan
     </el-row>
-    <h1>Industrial Park</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error doloremque omnis animi, eligendi magni a voluptatum, vitae, consequuntur rerum illum odit fugit assumenda rem dolores inventore iste reprehenderit maxime! Iusto.</p>
+    <el-row class="main">
+      <el-image :src="require('@/assets/layout.jpg')" fit="cover"></el-image>
+    </el-row>
   </Layout>
 </template>
 
@@ -15,3 +16,15 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.el-image {
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 767px) {
+  .el-image {
+    margin-top: 0;
+  }
+}
+</style>
