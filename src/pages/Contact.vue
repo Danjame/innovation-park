@@ -19,7 +19,7 @@
 <script>
 export default {
   metaInfo: {
-    title: 'Contact'
+    title: '联系我们'
   },
   data () {
     return {
@@ -55,12 +55,4 @@ h1 {
     text-align: left;
   }
 }
-
-
-/* .fade-enter-active, .fade-leave-active {
-  transition: opacity 1s
-}
-.fade-enter, .fade-leave-active {
-  opacity: 0
-} */
 </style>

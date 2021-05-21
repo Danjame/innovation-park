@@ -33,7 +33,7 @@ query {
 <script>
 export default {
   metaInfo: {
-    title: 'About'
+    title: '关于我们'
   }
 }
 </script>

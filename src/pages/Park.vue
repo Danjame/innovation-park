@@ -12,7 +12,7 @@
 <script>
 export default {
   metaInfo: {
-    title: 'Industrial Park'
+    title: '产业园区'
   }
 }
 </script>

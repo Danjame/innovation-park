@@ -2,7 +2,7 @@
   <Layout>
     <el-carousel :autoplay="!isMobile">
       <el-carousel-item v-for="edge in $page.banners.edges" :key="edge.node.id">
-        <el-image :src="`${baseUrl}${edge.node.url.url}`" fit="cover"></el-image>
+        <el-image :src="baseUrl + edge.node.url.url" fit="cover"></el-image>
       </el-carousel-item>
     </el-carousel>
     <el-row class="main">
@@ -50,11 +50,10 @@ query {
 <script>
 export default {
   metaInfo: {
-    title: 'Hello, world!'
+    title: '首页'
   },
   data () {
     return {
-      baseUrl: 'http://localhost:1337',
       isMobile: document.documentElement.clientWidth >= 768 ? false : true,
       activeName: 'first'
     }
