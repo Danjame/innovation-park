@@ -5,8 +5,12 @@
     </el-row>
     <el-row class="main">
       <div v-for="edge in $page.businesses.edges" :key="edge.node.id">
-        <h1>{{edge.node.name}}</h1>
-        <p>{{edge.node.description}}</p>
+        <transition name="el-zoom-in-top" appear>
+          <div>
+            <h1>{{edge.node.name}}</h1>
+            <p>{{edge.node.description}}</p>
+          </div>
+        </transition>
       </div>
     </el-row>
   </Layout>
@@ -53,5 +57,9 @@ h1 {
     padding: 2rem 1rem;
     font-size: 0.9rem;
   }
+
+  h1 {
+  text-align: left;
+}
 }
 </style>

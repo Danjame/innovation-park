@@ -14,14 +14,18 @@
       </el-col>
       <el-col class="main-right" :xs="24" :sm="12">
         <el-image :src="require('@/assets/layout.jpg')" fit="cover"></el-image>
-        <div>
-          <p>业务板块</p>
-          <ul style="margin-top: 20px; display: flex; flex-direction: column">
-            <li>园区运营</li>
-            <li style="margin-top: 10px;">孵化投资&政策申报</li>
-            <li style="margin-top: 10px;">园区服务</li>
-          </ul>
-        </div>
+        <g-link to="/business">
+          <el-card class="main-right-card">
+            <div slot="header" class="clearfix">
+              <span>业务板块</span>
+            </div>
+            <div>
+              <p>1. 园区运营</p>
+              <p style="margin-top: 10px;">2. 孵化投资&政策申报</p>
+              <p style="margin-top: 10px;">3. 园区服务</p>
+            </div>
+          </el-card>
+        </g-link>
       </el-col>
     </el-row>
   </Layout>
@@ -92,6 +96,10 @@ export default {
   height: 20rem;
 }
 
+.main-right-card {
+  margin-left: 10px;
+}
+
 @media screen and (max-width: 991px) {
   ::v-deep .el-carousel__container {
     height: 30rem;
@@ -122,6 +130,10 @@ export default {
   .main-right .el-image {
     width: 100%;
     height: 20rem;
+  }
+
+  .main-right-card {
+    margin-left: 0;
   }
 }
 

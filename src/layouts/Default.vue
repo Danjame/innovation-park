@@ -7,7 +7,7 @@
         </g-link>
       </el-col>
       <el-col class="header-menu">
-        <el-menu mode="horizontal" router>
+        <el-menu mode="horizontal" router :default-active="this.$route.fullPath">
           <el-menu-item index="/">首页</el-menu-item>
           <el-menu-item index="/about">关于我们</el-menu-item>
           <el-menu-item index="/business">业务领域</el-menu-item>
@@ -53,9 +53,9 @@ query {
     data() {
       return {
         drawer: false
-      };
+      }
     }
-  };
+  }
 </script>
 
 <style scoped>

@@ -3,14 +3,16 @@
     <el-row class="banner">
       Slogan
     </el-row>
+    <transition name="el-zoom-in-top" appear>
     <el-row class="main">
       <el-col>联系我们：</el-col>
       <el-col>中科经纬智能制造产业园</el-col>
       <el-col>地址：北京市大兴区永昌中路8号</el-col>
       <el-col>邮编：100176</el-col>
       <el-col>电话：176 1099 8776 / 185 1337 1806</el-col>
-      <el-col>邮箱：</el-col>
+      <el-col>邮箱：ssinnopark@sina.com</el-col>
     </el-row>
+    </transition>
   </Layout>
 </template>
 
@@ -18,6 +20,11 @@
 export default {
   metaInfo: {
     title: 'Contact'
+  },
+  data () {
+    return {
+      animated: false
+    }
   }
 }
 </script>
@@ -48,4 +55,12 @@ h1 {
     text-align: left;
   }
 }
+
+
+/* .fade-enter-active, .fade-leave-active {
+  transition: opacity 1s
+}
+.fade-enter, .fade-leave-active {
+  opacity: 0
+} */
 </style>

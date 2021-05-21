@@ -4,10 +4,14 @@
       Slogan
     </el-row>
     <el-row class="main">
-      <div v-for="edge in $page.abouts.edges" :key="edge.node.id">
-        <h1>{{edge.node.title}}</h1>
-        <p>{{edge.node.description}}</p>
-      </div>
+        <div v-for="edge in $page.abouts.edges" :key="edge.node.id">
+          <transition name="el-zoom-in-top" appear>
+            <div>
+              <h1>{{edge.node.title}}</h1>
+              <p>{{edge.node.description}}</p>
+            </div>
+          </transition>
+        </div>
     </el-row>
   </Layout>
 </template>
@@ -42,10 +46,6 @@ export default {
 
 .main>div {
   margin-bottom: 1rem;
-}
-
-h1 {
-  text-align: center;
 }
 
 @media screen and (max-width: 767px) {
