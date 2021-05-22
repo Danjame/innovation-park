@@ -54,14 +54,15 @@ export default {
   },
   data () {
     return {
-      isMobile: document.documentElement.clientWidth >= 768 ? false : true,
+      isMobile: false,
       activeName: 'first'
     }
   },
-  created () {
+  mounted () {
     const _this = this;
+    this.isMobile = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth >= 768 ? false : true;
     window.onresize = () => {
-      _this.isMobile = document.documentElement.clientWidth >= 768 ? false : true
+      _this.isMobile = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth >= 768 ? false : true
     }
   }
 }
