@@ -59,10 +59,18 @@ export default {
     }
   },
   mounted () {
+    this.isMobile = this.getClientWidth() >= 768 ? false : true;
+
     const _this = this;
-    this.isMobile = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth >= 768 ? false : true;
     window.onresize = () => {
-      _this.isMobile = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth >= 768 ? false : true
+      const width = _this.getClientWidth()
+      _this.isMobile = width >= 768 ? false : true
+    }
+  },
+  methods: {
+    getClientWidth () {
+      const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+      return width
     }
   }
 }
